@@ -1,3 +1,7 @@
 .notify-hidden {
 	display: none;
 }
+
+.button-submit {
+	padding-top: 0.9em;
+}

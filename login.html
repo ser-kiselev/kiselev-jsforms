@@ -31,21 +31,21 @@
 				<div class="login-form__background--registration">
 					<div class="login-form p-10 pt-30 pb-30">
 						<h1 class="text-center login-heading mt-0 pt-0">Вход на сайт</h1>
-						<form>
-							<div class="notify notify--error mb-20 notify-hidden">Введите email</div>
-							<div class="notify notify--error mb-20 notify-hidden">Неверный формат email</div>
-							<div class="notify notify--error mb-20 notify-hidden">Введите пароль</div>
-							<div class="notify no-paddings notify-hidden">
+						<form id="loginForm" action="success.html" novalidate>
+							<div id="enterEmail" class="notify notify--error mb-20 notify-hidden">Введите email</div>
+							<div id="invalidEmail" class="notify notify--error mb-20 notify-hidden">Неверный формат email</div>
+							<div id="enterPassword" class="notify notify--error mb-20 notify-hidden">Введите пароль</div>
+							<div id="invalidEmailPassword" class="notify no-paddings notify-hidden">
 								<div class="notify no-radius-bottom notify--error">Неверный email или пароль</div>
 								<div class="notify no-radius-top">
 									<p>Введите верные данные для входа или воспользуйтесь
 										<a href="#!">восстановлением пароля </a>, чтобы войти на сайт.</p>
 								</div>
 							</div>
-							<input class="input-form-registration" name="email" type="email" placeholder="Email" />
-							<input class="input-form-registration" name="password" type="password" placeholder="Пароль" />
+							<input id="inputEmail" class="input-form-registration" name="email" type="email" placeholder="Email" />
+							<input id="inputPassword" class="input-form-registration" name="password" type="password" placeholder="Пароль" />
 							<div class="text-center pt-30">
-								<input type="submit" class="button button--enter pl-50 pr-50" value="Войти">
+								<input id="buttonSubmit" type="submit" class="button button--enter button-submit pl-50 pr-50" value="Войти">
 							</div>
 						</form>
 					</div>
