@@ -59,7 +59,7 @@ $(document).ready(function() {
 				}
 			}
 
-			// Hide errors while typing
+			// // Hide errors while fill the inputs
 			_inputEmail.keypress(function(){
 				_enterEmail.fadeOut();
 				_invalidEmail.fadeOut();
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 	}());
 
-	// Run checkLogin module
+	// Run checkRegistration module
 	checkRegistration.init();
 
 });
