@@ -43,24 +43,16 @@ $(document).ready(function() {
 				_enterEmail.fadeIn(500);
 			} else {
 				var _pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-				
+
 				if ( _pattern.test( _inputEmailVal ) ) {
-
-					if ( _inputEmailVal !== 'mail@mail.com' ) {
-						_invalidEmailPassword.fadeIn(500);
-
+					
+					if ( _inputPasswordVal.length === 0 ) {
+						_enterPassword.fadeIn(500);
 					} else {
-
-						if ( _inputPasswordVal.length === 0 ) {
-							_enterPassword.fadeIn(500);
-							
+						if ( _inputEmailVal == 'mail@mail.com' && _inputPasswordVal == '123' ) {
+							_loginForm.unbind('submit').submit();
 						} else {
-
-							if ( _inputPasswordVal !== '123' ) {
-								_invalidEmailPassword.fadeIn(500);
-							} else {
-								_loginForm.unbind('submit').submit();
-							}
+							_invalidEmailPassword.fadeIn(500);
 						}
 					}
 
