@@ -37,21 +37,23 @@ $(document).ready(function() {
 			// Check inputs
 			if ( _inputEmailVal.length === 0 ) {
 				_enterEmail.fadeIn(500);
-			} else {
-				var _pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 				
+			} else {
+
+				var _pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+
 				if ( _pattern.test( _inputEmailVal ) ) {
-					//_invalidEmail.fadeOut(200);
-
-					if ( _inputEmailVal === 'mail@mail.com' ) {
-						_emailOccupied.fadeIn(500);
-
+					
+					if ( _inputPasswordVal.length === 0 ) {
+						_enterPassword.fadeIn(500);
 					} else {
-						if ( _inputPasswordVal.length === 0 ) {
-							_enterPassword.fadeIn(500);
+
+						if ( _inputEmailVal === 'mail@mail.com' ) {
+							_emailOccupied.fadeIn(500);
 						} else {
 							_registrationForm.unbind('submit').submit();
 						}
+
 					}
 
 				} else {
@@ -59,7 +61,7 @@ $(document).ready(function() {
 				}
 			}
 
-			// // Hide errors while fill the inputs
+			// Hide errors while typing
 			_inputEmail.keypress(function(){
 				_enterEmail.fadeOut();
 				_invalidEmail.fadeOut();
@@ -79,7 +81,7 @@ $(document).ready(function() {
 
 	}());
 
-	// Run checkRegistration module
+	// Run checkLogin module
 	checkRegistration.init();
 
 });
